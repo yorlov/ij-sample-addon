@@ -1,0 +1,18 @@
+<idea-plugin>
+    <id>addon.id</id>
+    <name>Addon</name>
+    <vendor email="yuri.n.orlov@gmail.com" url="orlov.it">Yuri Orlov</vendor>
+
+    <description><![CDATA[
+    Provide useful features for intellij addon development
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>org.jetbrains.idea.maven</depends>
+    <depends>com.intellij.properties</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <psi.referenceContributor implementation="it.orlov.intellij.I18NKeyReferenceContributor" language="JavaScript"/>
+    </extensions>
+</idea-plugin>
